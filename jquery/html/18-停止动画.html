@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            display: none;
+        }
+    </style>
+    <script src="../js/jquery-1.11.1.js"></script>
+    <script>
+        $(function(){
+            $("button:eq(0)").click(function(){
+                $("div").slideDown(2000);
+            });
+            $("button:eq(1)").click(function(){
+                $("div").slideUp(2000);
+            }); 
+            $("button:eq(2)").click(function(){
+                $("div").stop(false,true);
+            }); 
+        });
+    </script>
+</head>
+<body>
+    <button>划入</button>
+    <button>划出</button>
+    <button>停止</button>
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>显示</button>
+    <ul></ul>
+    <script>
+        var but = document.getElementsByTagName("button")[0];
+        var ul = document.getElementsByTagName("ul")[0];
+        var mm = ["贵妃","西施","貂蝉","昭君"];
+       but.onclick = function(){
+           ul.innerHTML = "";
+            for(var i=0;i<mm.length;i++){
+                var newMm = document.createElement("li");
+                newMm.innerText = mm[i];
+                ul.appendChild(newMm);
+            } 
+            var mmLi = ul.children;
+            for(var j=0;j<mmLi.length;j++){
+                mmLi[j].onmouseover = function(){
+                    for(var i=0;i<mmLi.length;i++){
+                        mmLi[i].style.backgroundColor = "";
+                    }
+                    this.style.backgroundColor = "red";
+                }  
+            }
+       }
+      
+    </script>
+</body>
+</html>

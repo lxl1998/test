@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Per(name,age,gender){
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+            this.sayH = function(){
+                console.log("wo");
+            }
+        }
+
+        var p = new Per("wo",22,"male");
+
+        Per.prototype.s = function(){
+            console.log("wo"+this.age+this.age+this.gender+"zuiShu");
+        }
+        p.sayH();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

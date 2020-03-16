@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        li{
+            height: 30px;
+            line-height: 30px;
+            list-style: none;
+            background-color: red;
+            margin: 5px 0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button>创建4个li</button>
+    <ul>
+        <li>LXL</li>
+        <li>LXL</li>
+        <li>LXL</li>
+        <li>LXL</li>
+        <li>LXL</li>
+    </ul>
+    <script>
+        var btu = document.getElementsByTagName("button")[0];
+        var ul = btu.nextElementSibling;
+        // var ul = document.getElementsByTagName("ul")[0];
+
+        btu.onclick = function(){
+            for(i=1;i<=4;i++){
+                var newLi = document.createElement("li");
+                newLi.innerHTML = "LXL";
+                ul.appendChild(newLi);
+            }
+        }
+        ul.onclick = function(event){
+            event = event || window.event;
+            var aaa = event.target?event.target:event.srcElement;
+            if(aaa.tagName == "LI"){
+                alert(1)
+            }
+        }
+    </script>
+</body>
+</html>

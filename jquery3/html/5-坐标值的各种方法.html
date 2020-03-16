@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 5000px;
+        }
+        .box1{
+            width: 300px;
+            height: 300px;
+            position: relative;
+            margin: 10px;
+            background-color: pink;
+        }
+        .box1{
+            width: 300px;
+            height: 300px;
+            top: 50px;
+            left: 50px;
+            position: absolute;
+            background-color: red;
+        }
+    </style>
+    <script src="../js/jquery-1.11.1.js"></script>
+    <script>
+        //offset是到页面顶端，position是上一个定位，恰恰与js相反
+        $(window).ready(function(){
+            $("button").eq(0).click(function(){
+                alert($(".box2").offset().top);
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>offset().left获取</button>
+    <button>offset().left设置</button>
+    <button>position.left()</button>
+    <button>position.top()</button>
+    <button>scroll().left()</button>
+    <button>scroll().top()</button>
+    <div class="box1">
+        <div class="box2">
+        </div>
+    </div>
+</body>
+</html>

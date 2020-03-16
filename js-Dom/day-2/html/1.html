@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            var inp = document.getElementsByTagName("input")[0];
+            var btn = document.getElementsByTagName("button")[0];
+            var btn1 = document.getElementsByTagName("button")[1];
+            btn.onclick = function(){
+                inp.disabled = true;
+            }
+            btn1.onclick = function(){
+                inp.disabled = false;
+            }
+        }
+    </script>
+</head>
+<body>
+    账号<input type="text" value="123456"><button>禁用</button><button>解禁</button><br>
+    密码<input type="password" value="123456">
+</body>
+</html>

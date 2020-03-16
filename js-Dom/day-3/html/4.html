@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>参照</li>
+    </ul>
+    <script>
+        var ul = document.getElementsByTagName("ul")[0];
+        var li = document.getElementsByTagName("li")[0];
+        var li1 = document.createElement("li");
+        li1.innerText = "append"
+        ul.appendChild(li1);
+        var li2 = document.createElement("li");
+        li2.innerText = "insert"
+        ul.insertBefore(li2,li1);
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        button{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button>200</button>
+    <button>400</button>
+    <div class="box" style="width: 100px; height: 100px; background-color: pink; position: relative;"></div>
+    <div class="box" style="width: 100px; height: 100px; background-color: pink; position: relative; top: 10px;"></div>
+    <script>
+        var btn1 = document.getElementsByTagName("button")[0];
+        var btn2 = document.getElementsByTagName("button")[1];
+        var div1 = document.getElementsByTagName("div")[0];
+        var div2 = document.getElementsByTagName("div")[1];
+        var timer = null;
+        btn1.onclick = function(){ 
+            moveA(div2,200); 
+        }
+        btn2.onclick = function(){ 
+            moveA(div2,400);
+        }
+        function moveA(ele,tr){
+            clearInterval(timer);
+            var speed = ele.offsetLeft<tr?10:-10;
+            timer = setInterval(function(){
+                var val = tr-ele.offsetLeft;
+                ele.style.left = (ele.offsetLeft)+speed+"px";
+                if(Math.abs(val)<Math.abs(speed)){
+                    ele.style.left = tr+"px";
+                    clearInterval(timer);
+                }
+            },30);      
+        }
+    </script>
+</body>
+</html> 

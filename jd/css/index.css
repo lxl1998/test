@@ -1,0 +1,210 @@
+@charset "UTF-8";
+/* sub-banner部分start */
+.sub-banner{
+    position: relative;
+    /* z-index: -1; */
+}
+.sub-banner a{
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 644px;
+    background: url(../image/subbanner.jpg) no-repeat center top;
+}
+/**********************************************************************/
+/* sub-banner部分end */
+/* main部分start */
+.main{
+    position: relative;
+    /* z-index: 1; */
+}
+.main-slide{
+    float: left;
+    position: relative;
+    margin: 12px 0 0 220px;
+    width: 735px;
+    height: 454px;
+}
+.main-slide ul{
+    position: absolute;
+    left: 50%;
+    bottom: 10px;   
+    margin-left: -66px;
+}
+.main-slide ul li{
+    float: left;
+    width: 18px;
+    text-align: center;
+    margin: 0 2px;
+    color: #fff;
+    height: 18px;
+    line-height: 18px;
+    cursor: pointer;
+    background-color: #3e3e3e;
+    border-radius: 50%;
+}
+.arrow a{
+    position: absolute;
+    top: 50%;
+    width: 28px;
+    /* left: 0; */
+    height: 62px;
+    margin-top: -31px;
+    background-color: rgba(0, 0, 0, 0.3);
+    /* opacity: 0.3; */
+    color: #fff;
+    text-align: center;
+    font: 400 22px/62px "simsun";
+}
+.arrow a:hover{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.arrow-left{
+    left: 0;
+}
+.arrow .arrow-right{
+    margin-right: 5px;
+    right: 0;
+}
+.main-news{
+    float: right;
+    height: 466px;
+    width: 250px;
+    overflow: hidden;
+}
+.main-news-top{
+    width: 248px;
+    height: 374px;
+    margin: 12px 0 5px 0;
+    
+    border: 1px solid #e4e4e4;
+}
+.main-news-top-fast{
+    height: 163px;
+    border: 1px dashed #e4e4e4;
+}
+.main-news-top-fast-title{
+    height: 32px;
+    padding: 0 15px;
+    line-height: 32px;
+    
+    border: 1px dotted  #e8e8e7;
+}
+.main-news-top-fast-title h2{
+    float: left;
+    font:400 16px/32px "微软雅黑" ;
+}
+.main-news-top-fast-title a{
+    float: right;
+}
+.main-news-top-fast-content{
+    padding: 5px 0 0 15px;
+}
+.main-news-top-fast-content li{
+    line-height: 24px;
+}
+.main-news-top-fast-content span{
+    font-weight: 700;
+    margin-right: 5px;
+}
+.main-news-top-money ul{
+    width: 260px;
+    /* margin-top: -2px; */
+}
+.main-news-top-money li{
+    width: 62px;
+    height: 70px;
+    float: left;
+    margin-left: -1px;
+    margin-top: -1px;
+    border: 1px solid #e8e8f7;
+    border-top: 0;
+}
+.main-news-top-money a{
+    display: block;
+    width: 62px;
+    height: 70px;
+    position: relative;
+    padding-top: 40px;
+    text-align: center;
+    line-height: 30px;
+}
+.main-news-top-money i{
+    position: absolute;
+    top: 13px;
+    left: 18px;
+    width: 25px;
+    height: 25px;
+    background: url(../image/fly.png) no-repeat;
+}
+.main-news-top-money .main-news-top-money-icon2{
+    background: url(../image/fly.png) no-repeat 0 -25px;
+}
+.main-news-top-money .main-news-top-money-icon3{
+    background: url(../image/fly.png) no-repeat 0 -50px;
+}
+.main-news-top-money .main-news-top-money-icon4{
+    background: url(../image/fly.png) no-repeat 0 -75px;
+}
+.main-news-top-money .main-news-top-money-icon5{
+    background: url(../image/fly.png) no-repeat 0 -100px;
+}
+.main-news-top-money .main-news-top-money-icon6{
+    background: url(../image/fly.png) no-repeat 0 -125px;
+}
+.main-news-top-money .main-news-top-money-icon7{
+    background: url(../image/fly.png) no-repeat 0px -150px;
+}
+.main-news-top-money .main-news-top-money-icon8{
+    background: url(../image/fly.png) no-repeat 0 -175px;
+}
+.main-news-top-money .main-news-top-money-icon9{
+    background: url(../image/fly.png) no-repeat 0 -200px;
+}
+.main-news-top-money .main-news-top-money-icon10{
+    background: url(../image/fly.png) no-repeat 0 -225px;
+}
+.main-news-top-money .main-news-top-money-icon11{
+    background: url(../image/fly.png) no-repeat 0 -250px;
+}
+.main-news-top-money .main-news-top-money-icon12{
+    background: url(../image/fly.png) no-repeat 0 -275px;
+}
+.main-news-top-money .spe{
+    position: absolute;
+    margin-left: 10px;
+    margin-top: -18px;
+}
+/* main部分end */
+/********************************************************************/
+/* today部分start */
+.today{
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.today-left{
+    float: left;
+}
+.today-left a{
+    display: block;
+    width: 210px;
+    height: 151px;
+    background: url(../image/pic1.jpg);
+}
+.today-right{
+    width: 1000px;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    /* float: right; */
+}
+.today-right ul{
+    width: 1100px;
+    
+}
+.today-right li{
+    float: left;
+    margin-left: 1px;
+}
+/* today部分end */

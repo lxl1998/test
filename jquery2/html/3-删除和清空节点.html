@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-1.11.1.js"></script>
+    <script>
+        $(window).ready(function(){
+            //append()方法在盒子的最末尾添加
+            $("button").eq(0).click(function(){
+                //自杀方法
+                $("li").eq(0).remove();
+            });
+            $("button").eq(1).click(function(){
+                //清空
+                //方法1：.html("");因为设置了空字符串
+                // $("ul").html("");
+                //2.empty（）；
+                $("ul").empty();
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>删除第一个li</button>
+    <button>清空</button>
+    <ul>
+        <li>LXL1</li>
+        <li>LXL2</li>
+        <li>LXL3</li>
+        <li>LXL4</li>
+        <li>LXL5</li>
+    </ul>
+</body>
+</html>

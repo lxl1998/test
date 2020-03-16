@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-1.11.1.js"></script>
+    <script>
+        // 第一种绑定click
+        //第二种bind
+        // $(document).bind("click mouseenter",function(){
+        //     alert(1);
+        // });
+        // $(document).bind("click mouseenter",function(){
+        //     alert(2);
+        // });
+        //第三种
+        // $(document).delegate(".box","click",function(){
+        //     alert(1)
+        // });
+        //第四种 on  可以传json
+        $(document).on("click mouseenter",".box",{"name":111},function(e){
+            alert(e.data.name);
+        });
+    </script>
+</head>
+<body>
+    <div class="box" style="width:100px;height:100px;background:pink;"></div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //正则定义（1内置对象 2字面量）,不能定义空的
+        var reg1 = new RegExp(/abc/);//没有规则的正则表达式，无意义，第一种内置
+        var reg2 = /def/;//字面量定义法
+        //使用:test();正则表达式有一个方法叫test（），有一个返回值是bool类型，决定参数是否是正则表达式
+        console.log(reg1.test("abc"));
+        console.log(reg1.test("ab"));
+        console.log(/abc/.test("abc"));
+    </script>
+</body>
+</html>

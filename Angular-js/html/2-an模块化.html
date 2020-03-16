@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box" ng-app="App">
+        <div ng-controller="DemoController">
+            <h1>{{name}}在{{school}}学习使用AngularJs</h1>
+        </div>
+    </div>
+    <script src="../js/angular.min.js"></script>
+    <script>
+        //提供一个全局的的对象
+        var App = angular.module('App',[]);
+        App.controller('DemoController',['$scope',function($scope){
+            $scope.name = 'LXL';
+            $scope.school = 'smxy';
+        }]);
+    </script>
+</body>
+</html>

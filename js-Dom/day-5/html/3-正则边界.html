@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //边界
+        //以abc为开头，以abc为结尾，所以只能abc
+        console.log(/^abc$/.test("abc"));
+        console.log(/^abc$/.test("a"));
+        console.log(/^abc$/.test("ac"));
+        console.log(/^abc$/.test("abcd"));
+        console.log(/^abc$/.test("abcadasdsadabc"));
+    </script>
+</body>
+</html>

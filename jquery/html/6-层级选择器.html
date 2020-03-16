@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-1.11.1.js"></script>
+    <script>
+        $(window).ready(function(){
+            //空格儿子
+            var jqUl = $("ul li");
+            jqUl.css("margin",5);
+            jqUl.css("background","pink");
+            //>是孙子
+            var jqOl = $("ul>li");
+            jqOl.css("background","red");
+        });
+    </script>
+</head>
+<body>
+    <ul>
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+        <ol>
+            <li>aaa</li>
+            <li>bbb</li>
+            <li>ccc</li>
+        </ol>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("--------预定义类--------");
+        //除了换行和回车
+        // console.log(/./.test("\n\r"));
+        // console.log(/./.test("aaaaaaaaaaa"));
+        // console.log(/\d/.test(123));
+        // console.log(/\d/.test("aaaaaaaaaaaaa"));
+        // console.log(/\S/.test(" "));
+        // console.log(/\S/.test("aaaaaaaaaaaaa"));
+        console.log("--------简单类--------");//只能多不能少，必须是完整的
+        // console.log(/chaoge/.test("chaoge"));//true         
+        // console.log(/chaoge/.test("chaogennnnnnnn"));//true
+        // console.log(/chaoge/.test("nnnnnnchaoge"));//true
+        // console.log(/chaoge/.test("chaossssssge"));//false
+        //加[],[]里面与匹配的有一个相对的是true
+        // console.log(/[chaoge]/.test("chasdasdsadsaoge"));
+        // console.log(/[chaoge]/.test("adasdasdsadchaoge"));
+        // console.log(/[chaoge]/.test("chaoasdasdsage"));
+        // console.log(/[chaoge]/.test("chsadsaaogeasdsad"));
+        // console.log(/[chaoge]/.test("bbbbbbbbbbbb"));
+        console.log("--------负向类--------");//（^）取反,只能少不能多。多了是true，不一样也是true
+        // console.log(/[^abc]/.test("abcd"));
+        // console.log(/[^abc]/.test("a"));
+        // console.log(/[^abc]/.test("aiiiiiiiiiii"));
+        // console.log(/[^abc]/.test("dddd"));
+        console.log("--------范围类--------");
+        // console.log(/[a-cc-y]/.test("z"));
+        console.log("--------组合类--------");
+        console.log(/[a-c1-6]/.test("dghhh"));
+        console.log(/[a-c1-6]/.test("b"));
+        console.log(/[a-c1-6]/.test("5"));
+        console.log(/[a-c1-6]/.test("7"));
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .box{
+            /* position: relative; */
+            width: 500px;
+            margin: 200px auto;
+            
+        }
+        ul{
+            list-style: none;
+            border: 1px solid #000;
+            width: 400px;
+        }
+        li:hover{
+            background-color: red;
+        }
+        input{
+            width: 398px;
+            height: 26px;
+            font: 700 14px/26px "微软雅黑";
+        }
+        button{
+            width: 70px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <input type="text" placeholder="输入">
+        <button>搜索</button>
+        <!-- <ul>
+            <li>aaa</li>
+            <li>aaa</li>
+            <li>aaa</li>
+        </ul> -->
+    </div>
+    <script>
+        var box = document.getElementsByTagName("div")[0];
+        var inp = box.children[0];
+        var arr = ["a","b","c","d","ab","ac","ab","abc","abcd","cd"];
+        inp.oninput = function(){
+            var newArr = [];
+            var val = this.value;
+            for(var i=0;i<arr.length;i++){
+                if(arr[i].indexOf(val)!=-1){
+                    newArr.push("<li>"+arr[i]+"</li>");
+                }
+            }
+            var str = newArr.join("");
+            // console.log(typeof(str));
+            if(box.children[2]){
+                box.removeChild(box.children[2]);
+            }
+            console.log(newArr);
+            if(this.value == ""||newArr==""){
+               return; 
+            }
+            var ul = document.createElement("ul");
+            ul.innerHTML = str;
+            box.appendChild(ul);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="can" width="500" height="500"></canvas>
+    <script>
+        var cvs = document.getElementById('can');
+        var context = cvs.getContext('2d');
+        context.lineWidth = 9;
+        context.moveTo(10, 10);
+        context.lineTo(310, 10);
+        context.stroke();
+
+        context.beginPath();
+        context.lineCap='round';
+        context.moveTo(10, 30);
+        context.lineTo(310, 30);
+        context.stroke();
+
+        context.beginPath();
+        context.lineCap='square';
+        context.moveTo(10, 50);
+        context.lineTo(310, 50);
+        context.stroke();
+        
+    </script>
+</body>
+</html>

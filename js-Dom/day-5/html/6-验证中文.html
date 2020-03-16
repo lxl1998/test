@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <input type="text">
+        <span>您输入!</span>
+    </div>
+    <script>
+        var inp = document.getElementsByTagName("input")[0];
+        var span = inp.nextElementSibling || inp.nextSibling;
+        inp.onblur = function(){
+            var reg1 = /^[\u4e00-\u9fa5]{2,4}$/;
+            if(reg1.test(inp.value)){
+                span.style.color = "green"; 
+                span.innerHtml = "true";
+            }else{
+                span.style.color = "red";
+                span.innerHtml = "false";
+            }
+        }
+    </script>
+</body>
+</html>

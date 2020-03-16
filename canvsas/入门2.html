@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="can" width="500" height="500"></canvas>
+    <script>
+        var cvs = document.getElementById('can');
+        var context = cvs.getContext('2d');
+
+        // context.moveTo(110, 10);
+        // context.lineTo(60, 60);
+        // context.lineTo(160, 60);
+        // context.lineTo(110, 10);
+        // context.closePath();
+        // context.strokeStyle='red';
+        // context.lineWidth=6;
+        // context.stroke();
+        // context.strokeStyle='red';
+        // context.moveTo(100, 50);
+        // context.lineTo(300, 50);
+        // context.lineTo(300, 200);
+        // context.lineTo(100, 200);
+        // context.lineTo(100, 50);
+        // context.lineWidth=6;
+        // context.closePath();
+        // context.stroke();
+        // function juxing(startX,startY,chang,kuang,width,sty,sty1){
+        //     context.beginPath();
+        //     context.moveTo(startX, startY);
+        //     context.lineTo(startX+chang,startY);
+        //     context.lineTo(startX+chang, startY+kuang);
+        //     context.lineTo(startX, startY+kuang);
+        //     // context.lineTo(startX, startY);
+        //     context.closePath();
+        //     context.strokeStyle=sty;
+        //     context.lineWidth=width; 
+        //     // context.fillStyle=sty1;
+            
+        //     // context.fill();
+        //     context.stroke();
+           
+            
+                        
+            
+        // }
+        // juxing(100,100,200,100,10,'red');
+        // context.beginPath();
+        // context.moveTo(150, 150);
+        // context.lineTo(150,200);
+        // context.lineTo(200,200);
+        // context.lineTo(200,150);
+        // // context.lineTo(150,150);
+        // context.closePath();
+        // context.stroke();
+        
+        // juxing(200,250,200,100,6,'red','red');
+        
+        // for(var i=0;i<=500;i=i+10){
+        //     context.beginPath();
+        //     context.moveTo(0, 10+i);
+        //     context.lineTo(500, 10+i);
+            
+        //     // context.strokeStyle='rgb('+i+',0,0)';
+        //     context.stroke();
+            
+        // }
+        // for(var i=0;i<=500;i=i+10){
+        //     context.beginPath();
+        //     context.moveTo(10+i, 0);
+        //     context.lineTo(10+i, 500);
+            
+        //     context.strokeStyle='rgb('+i+',0,0)';
+        //     context.stroke();
+            
+        // }
+            // context.setLineDash([5,10,10,5]);
+            
+            // context.moveTo(10, 10);
+            // context.lineTo(500, 10);
+            // context.stroke();
+            
+        // context.arcTo(100, 200, 300, 300, 40);
+        // context.stroke();
+        // console.log(Math.PI*2);
+        context.arc(200, 200, 90, 0,Math.PI*2);
+        context.stroke();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>

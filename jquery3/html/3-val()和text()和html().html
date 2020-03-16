@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-1.11.1.js"></script>
+    <script>
+        $(window).ready(function(){
+            //获取val的属性值
+            // alert($("input").val());
+            // $("input").val("lxl1");
+            //text();获取闭合标签中的文本值，不识别标签
+            // alert($("div").text());
+            $("li").text("asdasdsad");
+            // alert($("div").html());
+            $("div>li").siblings("div").html("adasdsad");
+        });
+    </script>
+</head>
+<body>
+    <input type="text" value="lxl">
+    <div>
+        <li>你好</li>
+        <li>你好</li>
+        <li>你好</li>
+        <li>你好</li>
+        llll    
+        <div>1111</div>
+    </div>
+</body>
+</html>

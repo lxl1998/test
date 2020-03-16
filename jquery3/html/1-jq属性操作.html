@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="../js/jquery-1.11.1.js"></script>
+    <script>
+        $(function(){
+            var jqI = $("input").eq(0);
+            var jqI1 = $("input").eq(1);
+            var but = $("button");
+            but.click(function(){
+                //能添加就能移除
+                // jqI = 111;  绑定到jq的衣服上，标签上没有
+                // alert(jqI);
+                // alert(jqI.attr("class"));
+                //绑定到标签上
+                // jqI.attr("class",111);
+                //移除
+                // jqI.removeAttr("class",111);
+                //form中的特殊属性使用prop();
+                jqI1.prop("checked",true);
+            });
+        });
+    </script>
+    <button>绑定</button>
+    <input class="111" type="text">
+    <input type="checkbox">
+</body>
+</html>

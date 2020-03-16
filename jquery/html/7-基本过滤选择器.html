@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-1.11.1.js"></script>
+    <script>
+        $(function(){
+            //利用过滤选择器设置偶数位元素的背景
+            //odd是偶数元素，获取的是索引值
+            var jqOdd = $("ul li:odd");
+            jqOdd.css("background","pink");
+            //even是奇数元素，获取的是索引值
+            var jqEven = $("ul li:even");
+            jqEven.css("background","red");
+            //eq(索引值)，这个方便
+            var jqFirst = $("ul li:eq(0)");
+            jqFirst.css("background","yellow");
+        });
+    </script>
+</head>
+<body>
+    <ul>
+        <li>LXL</li>
+        <li>LXL</li>
+        <li>LXL</li>
+        <li>LXL</li>
+        <li>LXL</li>
+    </ul>
+</body>
+</html>

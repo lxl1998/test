@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        select{
+            width: 170px;
+            height: 240px;
+            font-size: 18px;
+            background-color: pink;
+        }
+    </style>
+    <script src="../js/jquery-1.11.1.js"></script>
+    <script>
+        $(window).ready(function(){
+            $("button").eq(0).click(function(){
+                $("#s2").append($("#s1 option"));
+            });
+            $("button").eq(1).click(function(){
+                $("#s1").append($("#s2 option"));
+            });
+            $("button").eq(2).click(function(){
+                $("#s2").append($("#s1 option:selected"));
+            });
+            $("button").eq(3).click(function(){
+                $("#s1").append($("#s2 option:selected"));
+            });
+        });
+    </script>
+</head>
+<body>
+    <select id="s1" size="10" multiple>
+        <option value="0">A</option>
+        <option value="1">B</option>
+        <option value="2">C</option>
+        <option value="3">D</option>
+    </select>
+    <button>>>></button>
+    <button><<<</button>
+    <button>></button>
+    <button><</button>
+    <select id="s2" size="10" multiple>
+    </select>
+</body>
+</html>

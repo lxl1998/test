@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        select{
+            width: 100px;
+            height: 200px;
+        }
+        option{
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var sel1 = document.getElementById("sel1");
+            var sel2 = document.getElementById("sel2");
+            var but = document.getElementsByTagName("button");
+            but[0].onclick = function(){
+                var sg = sel1.children;
+                for(var i=sg.length-1;i>=0;i--){
+                    sel2.appendChild(sg[sg.length-1-i]);
+                }
+            }
+            but[1].onclick = function(){
+                var sg = sel2.children;
+                for(var i=sg.length-1;i>=0;i--){
+                    sel1.appendChild(sg[sg.length-1-i]);
+                }
+            }
+            // var sg1 = sel1.children;
+            // for(var i=sg1.length-1;i>=0;i--){ 
+            //     sg1[sg1.length-1-i].onclick = function(){
+            //         but[2].onclick = function(){
+            //             for(var j=sg1.length-1;j>=0;j--){ 
+            //                 sel2.appendChild(sg1[i]);
+            //             }
+            //             // sel2.appendChild(this.length);
+            //             // sel2.appendChild(sg1[i]);
+            //         }
+            //     }
+            // }
+            but[2].onclick = function(){
+                var sg = sel1.children;
+                var s = sg.length
+                for(var i=s-1;i>=0;i--){
+                    if(sg[i].selected === true){
+                        sel2.appendChild(sg[i]);
+                    }
+                }
+            }
+            but[3].onclick = function(){
+                var sg = sel2.children;
+                var s = sg.length
+                for(var i=s-1;i>=0;i--){
+                    if(sg[i].selected === true){
+                        sel1.appendChild(sg[i]);
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <select name="" size="10" id="sel1" multiple>
+        <option value="">香蕉</option>
+        <option value="">苹果</option>
+        <option value="">鸭梨</option>
+        <option value="">榴莲</option>
+    </select>
+    <button>>>></button>
+    <button><<<</button>
+    <button>></button>
+    <button><</button>
+    <select name="" size="10" id="sel2" multiple>
+    </select>
+</body>
+</html>

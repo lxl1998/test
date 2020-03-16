@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            width: 100px;
+            height: 50px;
+            margin-left: 20px;
+        }
+        .ys{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>4</button>
+    <button>5</button>
+    <!-- <ul>
+        
+    </ul> -->
+    <script>
+        var btn = document.getElementsByTagName("button");
+        for(var i=0;i<btn.length;i++){
+            btn[i].onmouseover = function(){
+                for(var j=0;j<btn.length;j++){
+                    btn[j].className = "";
+                }
+                this.className = "ys";
+            }    
+        }
+    </script>
+</body>
+</html>

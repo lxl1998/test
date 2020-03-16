@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 5000px;
+        }
+        img{
+            top: 15%;
+            /* margin-top: -220px; */
+        }
+        .i1{
+            position: fixed;
+            left: 10px;
+        }
+        .i2{
+            position: fixed;
+            right: 10px;
+        }
+        div {
+            width: 800px;
+            margin: 100px auto;
+            color: red;
+            text-align: center;
+            font: 700 40px/50px "simsun";
+        }
+    </style>
+</head>
+<body>
+    <img class="i1" src="../images/1.gif" alt="">
+    <img class="i2" src="../images/2.gif" alt="">
+    <div>
+        我为党国流过血，我为抗战立过功，我要见委座，我要见委座，我要见委座!!!啪...<br>
+        我为党国流过血，我为抗战立过功，我要见委座，我要见委座，我要见委座!!!啪...<br>
+        我为党国流过血，我为抗战立过功，我要见委座，我要见委座，我要见委座!!!啪...<br>
+        我为党国流过血，我为抗战立过功，我要见委座，我要见委座，我要见委座!!!啪...<br>
+        我为党国流过血，我为抗战立过功，我要见委座，我要见委座，我要见委座!!!啪...<br>
+        我为党国流过血，我为抗战立过功，我要见委座，我要见委座，我要见委座!!!啪...<br>
+        我为党国流过血，我为抗战立过功，我要见委座，我要见委座，我要见委座!!!啪...<br>
+        我为党国流过血，我为抗战立过功，我要见委座，我要见委座，我要见委座!!!啪...<br>
+    </div>
+    
+    <script>
+        var img1 = document.getElementsByTagName("img")[0];
+        var img2 = document.getElementsByTagName("img")[1];
+        setInterval(function(){
+            img1.style.display = "none";
+            img2.style.display = "none";
+        },5000);
+    </script>
+</body>
+</html>

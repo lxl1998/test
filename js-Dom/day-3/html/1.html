@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        div{
+            position: relative;
+            top: 60px;
+            left: 350px;
+        }
+        ul{
+            position: absolute;
+        }
+        li{
+            list-style: none;
+            float: left;
+            /* padding-left: 10px; */
+            text-align: center;
+            margin: 10px;
+            width: 70px;
+            height: 30px;
+            font: 700 15px/30px "微软雅黑";
+            background-color: brown;        
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .c{
+            background-color: coral;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var ul = document.getElementsByTagName("ul")[0];
+            var liArr = ul.children;
+            // var liArr = document.getElementsByTagName("li");
+            for(var i=0;i<liArr.length;i++){
+                var a = liArr[i].firstChild;
+                a.onclick = function(){
+                    for(var j=0;j<liArr.length;j++){
+                        liArr[j].className = "";
+                    }
+                    this.parentNode.className = "c";
+                    // alert(this.innerHTML);
+                }
+            }
+            // console.log(liArr);
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <ul>
+            <li class="c"><a href="#">首页</a></li>
+            <li><a href="javascript:;">播客</a></li>
+            <li><a href="javascript:;">相册</a></li>
+            <li><a href="javascript:;">点多</a></li>
+            <li><a href="javascript:;">试试</a></li>
+            <li><a href="javascript:;">问问</a></li>
+            <li><a href="javascript:;">嗯嗯</a></li>
+            <li><a href="javascript:;">啊啊</a></li>
+            <li><a href="javascript:;">学习</a></li>
+        </ul>
+    </div>
+</body>
+</html>

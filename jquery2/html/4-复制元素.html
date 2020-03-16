@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-1.11.1.js"></script>
+    <script>
+        $(window).ready(function(){
+            $("button").eq(0).click(function(){
+                //复制
+                $("ul").append($("li").clone());
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>复制节点</button>
+    <div class="box">
+        <ul>
+            <li>LXL1</li>
+            <li>LXL2</li>
+            <li>LXL3</li>
+            <li>LXL4</li>
+            <li>LXL5</li>
+        </ul>
+    </div>
+</body>
+</html>

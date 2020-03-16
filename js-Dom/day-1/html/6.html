@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: slateblue;
+        }
+        .hide{
+            display: none;
+        }
+        .show{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">隐藏</button>
+    <div>lxllxlxlxlxlxlxlxlx</div>
+    <script>
+        var btn = document.getElementById("btn");
+        var box = document.getElementsByTagName("div")[0];
+        btn.onclick = function(){
+            if(btn.innerHTML=="隐藏"){
+                box.className = "hide"
+                btn.innerHTML="出现"
+            }else{
+                box.className = ""
+                btn.innerHTML="隐藏"
+            }
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 3 -->
+    <li>s</li>
+    <script>
+        // console.log(navigator.userAgent);
+        // console.log(navigator.platform);
+        // var s = 0;
+        var s = 5;
+        var li = document.getElementsByTagName("li")[0];
+        setInterval(function(){
+            // alert(s);
+            // s++;
+            // location.href = ("http://www.baidu.com");
+            li.innerHTML = s;
+            s--;
+        },1000)
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-1.11.1.js"></script>
+    <script>
+        $(function(){
+            //find(sel);选择器,后代中查找
+            var jqUl = $("ul");
+            var jqLi = jqUl.find("li").css("background","pink");
+            //chlidren().eq()
+            //sibings()所有的兄弟节点
+            //next()下一个
+        });
+    </script>
+</head>
+<body>
+    <ul>
+        <li>LXL</li>
+        <li class="box">LXL</li>
+        <li>LXL</li>
+        <span>LXL</span>
+        <li>LXL</li>
+        <a id="box" href="#">LXL</a>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .top1{
+            height: 90px;
+            background-color: red;
+            /* opacity: 1; */
+            /* margin: 100px auto; */
+        }
+        .w{
+            position: relative;
+            height: 80px;
+            width: 1210px;
+            margin: 0px auto;
+            background-color: saddlebrown;
+        }
+        a{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+            font: 600 14px/25px "微软雅黑";
+            background-color: black;
+            color: wheat;
+            text-decoration: none;
+        }
+        .o{
+            height: 50px;
+            background-color: turquoise;
+        }
+    </style>
+</head>
+<body>
+    <div class="top1" style="opacity: 1;">
+        <div class="w">
+            <a href="#">x</a>
+        </div>
+    </div>
+    <div class="o"></div>
+
+    <script>
+        var top1 = document.getElementsByTagName("div")[0];
+        var a = document.getElementsByTagName("a")[0];
+        var timer = null;
+        a.onclick = function (){
+            setInterval(function(){
+                top1.style.opacity -=0.1;
+                if(top1.style.opacity < 0){
+                    top1.style.display = "none";
+                    clearInterval(timer);
+                }
+            },80)
+        }
+    </script>
+</body>
+</html>

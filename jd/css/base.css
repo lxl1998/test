@@ -1,0 +1,491 @@
+@charset "UTF-8";
+/*css 初始化 */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset, img, input, button { 			/*fieldset组合表单中的相关元素*/
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+ul, ol {
+    list-style: none;				/*清除列表风格*/
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "SimSun", "宋体";
+}
+
+select, input {
+    vertical-align: middle;
+}
+
+select, input, textarea {
+    font-size: 12px;
+    margin: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+/*防止多行文本框拖动*/
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+/*  去掉图片低测默认的3像素空白缝隙*/
+table {
+    border-collapse: collapse;			/*合并外边线*/
+}
+
+
+body {
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53";	/*宋体，Unicode，统一码*/
+    color: #666;
+    background: #fff
+}
+
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #C81623;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+s, i, em {
+    font-style: normal;
+    text-decoration: none;
+}
+
+.col-red {
+    color: #C81623 !important;
+}
+
+/*公共类*/
+.w {
+    /*版心 提取 */
+    width: 1210px;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.al {
+    text-align: left
+}
+
+.ac {
+    text-align: center
+}
+
+.ar {
+    text-align: right
+}
+
+.hide {
+    display: none
+}
+/************************************MYCODE**************************************************/
+/* site-nav部分start */
+.site-nav {
+    height: 30px;
+    line-height: 30px;
+    background: #f1f1f1;
+}
+.site-nav-send 
+{
+    position: relative;
+    padding: 0px 25px 0px 10px;
+}
+.site-nav-r .fore{
+    position: relative;
+    padding: 0px 25px 0px 10px;
+}
+.site-nav-send:hover{
+    background-color: #fff;
+    border-left: 1px #666 solid ;
+    border-right: 1px #666 solid ;
+}
+ .site-nav-send i,
+ .fore i{ 
+    position: absolute;
+    top: 12px;
+    width: 15px;
+    height: 7px;
+    right: 8px;
+    overflow: hidden;
+ } 
+.site-nav-send s,
+.fore s{
+    font: 400 13px/15px "consolas"; 
+    position: absolute;
+    top: -7px;
+}
+ .site-nav-r li{
+    padding: 0 10px;
+    float: left;
+}
+.site-nav-r .line {
+    width: 1px;
+    height: 12px;
+    background-color: #dddddd;
+    margin-top: 9px;
+    padding: 0px;
+}
+.site-nav-r .jd-tel {
+    padding-left: 25px;
+}
+.jd-tel span{
+    position: absolute;
+    width: 15px;
+    height: 20px;
+    top: 5px;
+    left: 5px;
+    background: url("../image/tel.png") no-repeat;
+}
+.jd-tel span:hover{
+    background-position:0 -25px;
+}
+/* site-nav部分end */
+
+/***********************************************************/
+/* top-banner部分start */
+.top-banner{
+    background-color:#37c2fb;
+}
+.tb{
+    position: relative;
+}
+.close-banner{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 19px;
+    width: 19px;
+    background: url("../image/close-banner.png") no-repeat;
+}
+.close-banner:hover{
+    background-position: bottom;
+}
+/* top-banner部分end */
+/**************************************************/
+/* search部分start */
+.search-logo{
+    float: left;
+    width: 362px;
+    height: 60px;
+    padding: 20px 0;
+}
+.search-logo a{
+    display: block;
+    text-indent: -9999em;
+    width: 270px;
+    height: 60px;
+    background: url(../image/logo.png);
+}
+.search-input{
+    float: left;
+    width: 538px;
+    height: 36px;
+    padding-top: 25px;
+}
+.search-input input{
+    float: left;
+    width: 450px;
+    height: 32px;
+    padding-left: 4px;
+    font:  400 12px/34px "microsoft yahei";
+    color: rgb(153,153,153);
+    border: 2px solid #b61d1d;
+    /* border-right: 0; */
+}
+.search-input button{
+    width: 80px;
+    height: 36px;
+    color: white;
+    font: 16px/36px "microsoft yahei";
+    background-color:#b61d1d ;
+    cursor: pointer;
+}
+.search-input button:hover{
+    background-color: red;
+}
+.search-car{
+    float: right;
+    width: 96px;
+    height: 34px;
+    line-height: 34px;
+    padding-left: 43px;
+    position: relative;
+    margin-top: 25px;
+    margin-right: 65px;
+    border: 1px solid #dfdfdf;
+    background-color:#f9f9f9;
+}
+.icon1{
+    position: absolute;
+    top: 9px;
+    left: 18px;
+    width: 18px;
+    height: 16px;
+    background: url(../image/tel.png) no-repeat 0 -58px;
+}
+.icon2{
+    position: absolute;
+    right: 10px;
+    color: #999;
+    font-family: "SimSun";
+}
+.icon3{
+    position: absolute;
+    width: 16px;
+    height: 14px;
+    top: -8px;
+    /* margin-top: 10px; */
+    background-color: #c81623;
+    line-height: 14px;
+    text-align: center;
+    border-radius: 8px 8px 8px 0px;
+    color: #fff;
+}
+.search-moreAlink{
+    float: left;
+    width: 538px;
+    height: 28px;
+    line-height: 28px;
+}
+.search-moreAlink li{
+    float: left;
+    padding-top: 5px;
+    padding-right: 7px;
+}
+.search-moreAlink li:first-child>a{
+    color:red;
+}
+.search-moreAlink a{
+    padding-right: 5px;
+}
+.search-moreAlink span{
+    color: red;
+}
+.search-moreAlink a:hover{
+    color:red;
+}
+/* search部分end */
+/************************************************************************/
+/* shortcut-nav部分start */
+.shortcut-nav{
+    position: relative;
+    height: 44px;
+    width: 100%;
+    border-bottom: 2px solid #b1191a;
+}
+.shortcut-nav-menu{
+    width: 210px;
+    height: 44px;
+    float: left;
+    position: relative;
+    z-index: 1;
+}
+.shortcut-nav-menu-all a{ 
+    display: block;
+    width: 190px;
+    height: 44px;
+    padding: 0px 10px; 
+    background-color: #b1191a;
+    color: white;
+    font: 400 15px/44px "黑软雅黑";
+}
+.shortcut-nav-menu-one{
+    height: 465px;
+    margin-top: 2px;
+    background-color: #c81623;
+    border-left: 1px solid #b1191a;
+    border-bottom: 1px solid #b1191a;
+}
+.shortcut-nav-menu-one div{
+    height: 31px;
+    font: 400 14px/31px "黑软雅黑";
+    padding: 0 10px;
+}
+.shortcut-nav-menu-one div:hover{
+    background-color: #fff;
+}
+.shortcut-nav-menu-one div:hover a{
+        color: #c81623;
+} 
+ .shortcut-nav-menu-one h3{
+    float: left;
+}
+.shortcut-nav-menu-one a{
+    color: #fff;
+}
+.shortcut-nav-menu-one i{
+    color: #fff;
+    font: 400 9px/31px "consolas";
+    float: right;
+}
+.shortcut-nav-item{
+    width: 730px;
+    height: 44px;
+    float: left;
+}
+.shortcut-nav-item li{
+    float: left;
+}
+ .shortcut-nav-item li a{
+    display: inline-block;
+    height: 44px;
+    padding: 0 10px;
+    color: #333;
+    font: 400 16px/44px "微软雅黑";
+}
+.shortcut-nav-item li a:hover{
+    color: #c81623;
+}
+.shortcut-nav-img{
+    width: 200px;
+    height: 44px;
+    margin-top: -35px;
+    margin-right: 50px;
+    float: right;
+}
+.shortcut-nav-img a>img{
+    border-radius: 25px 25px 25px 25px;
+}
+/* shortcut-nav部分end */
+/************************************************************************/
+/* footer部分start */
+.footer-top-slogen{
+    width: 100%;
+    height: 94px;
+    background-color:#f5f5f5;
+    margin-bottom: 16px;
+    position: relative;
+}
+.footer-top-slogen-icon{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+}
+.footer-top-slogen-icon1{
+    margin-left: -604px;
+}
+.footer-top-slogen-icon2{
+    margin-left: -302px;
+}
+.footer-top-slogen-icon4{
+    margin-left: 302px;
+}
+.footer-top-shopping dl{
+    float: left;
+    width: 200px;
+}
+/* .footer-top-shopping dl:nth-child(5){
+    width: 100px;
+}  */
+.footer-top-shopping .last-dl{
+    width: 100px;
+}
+.footer-top-shopping dt{
+    height: 34px;
+    font: 400 16px/34px "黑软雅黑";
+}
+.footer-top-shopping dd{
+    height: 20px;
+}
+.coverage{
+    width: 186px;
+    height: 169px;
+    float: right;  
+    margin-right: 40px;
+    padding-left: 17px;
+    /* margin-left: 17px; */
+    background: url(../image/china.png) no-repeat left bottom;
+}
+.footer-top-shopping .coverage h3{
+    height: 34px;
+    font: 400 16px/34px "黑软雅黑";
+}
+.coverage p{
+    padding-top: 8px;
+}
+.coverage a{
+    float: right;
+}
+.footer-bottom{
+    text-align: center;
+    border-top: 1px solid #e5e5e5;
+    padding: 20px 0 30px;
+    margin-top: 20px;
+}
+.footer-bottom-links a{
+    margin: 10px;
+}
+.footer-bottom-copyright{
+    margin: 10px 0 ;
+}
+.footer-bottom-img{
+    margin-top: 20px;
+}
+.footer-bottom-img a{
+    padding: 0 5px;
+}
+/*********************************************/
+/*.clearfix:after{
+    content: ".";
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;                 
+    display: block;
+    clear: both;
+}
+.clearfix{
+    *zoom: 1;                                      清除浮动的方法
+}
+.clearfix:before, .clearfix:after{
+    display: table;
+}
+.clearfix:after{
+    clear: both;
+}
+.clearfix{
+    *zoom: 1;
+}*/
+/*************************************************/
+/* footer部分end */

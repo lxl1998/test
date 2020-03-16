@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .top-banner{
+            background-color: pink;
+            /* width: 1366px   ; */
+        }
+        .w{
+            width: 1210px;
+            position: relative;
+            margin: 0px auto;
+        }
+        img{
+            width: 1210px;
+            height: 100px;
+            background-color: chartreuse;
+        }
+        a{
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            color: red;
+            background-color: slateblue;
+            width: 20px;
+            height: 20px;
+            font: 700 15px "微软雅黑";
+            text-decoration: none;
+            text-align: center;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+    <!-- <script>
+
+    </script> -->
+</head>
+<body>
+    <div class="top-banner" id="topb">
+        <div class="w">
+            <!-- <img src="../image/1-small.jpg" alt=""/> -->
+            <img src="" alt="">
+            <a href="#" id="aaa">x</a>
+        </div>
+    </div>
+
+    <script>
+       var aaa = document.getElementById("aaa");
+       var topb = document.getElementById("topb");
+       aaa.onclick = function (){
+        //    topb.className = "hide";
+        topb.style.display = "none";
+       }
+    </script>
+</body>
+</html>

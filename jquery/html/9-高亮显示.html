@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-1.11.1.js"></script>
+    <script>
+        $(window).ready(function(){
+            var jqLi1 = $("li:odd");
+            var jqLi2 = $("li:even");
+            jqLi1.css("background","yellow");
+            jqLi2.css("background","red");
+            //鼠标进入变色，离开恢复
+            var color = "";
+            $("li").mouseenter(function(){
+                color = $(this).css("background");
+                $(this).css("background","blue");
+            });
+            $("li").mouseleave(function(){
+                // color = $(this).css("background","color");
+                $(this).css("background",color);
+            });
+        });
+    </script>
+</head>
+<body>
+    <ul>
+        <li>LXL</li>
+        <li>LXL</li>
+        <li>LXL</li>
+        <li>LXL</li>
+        <li>LXL</li>
+        <li>LXL</li>
+        <li>LXL</li>
+    </ul>
+</body>
+</html>

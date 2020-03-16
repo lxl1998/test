@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: black;
+        }
+        .sun{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            box-shadow:0 0 30px 3px gold;
+            transform: translate(-50%,-50%);
+            left: 50%;
+            top: 50%;
+            border-radius: 50%;
+            background-color: yellow;
+        }
+        .earth{
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            /* box-shadow:0 0 30px 3px gold; */
+            /* border: 1px solid white; */
+            transform: translate(-50%,-50%);
+            left: 50%;
+            top: 50%;
+            border-radius: 50%;
+            animation: rot 18s linear infinite;
+            /* background-color: yellow; */
+        }
+        .earth::before{
+            content: "";
+            width: 40px;
+            height: 40px;
+            left: 0;
+            top: 50%;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            background-color: dodgerblue;
+            border-radius: 50%;
+        }
+        .moon{
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            /* box-shadow:0 0 30px 3px gold; */
+            /* border: 1px solid white; */
+            transform: translate(-50%,-50%);
+            left: 0;
+            top: 50%;
+            border-radius: 50%;
+            animation: rot 8s linear infinite;
+            /* background-color: yellow; */
+        }
+        .moon::before{
+            content: "";
+            width: 10px;
+            height: 10px;
+            left: 0;
+            top: 50%;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            background-color: floralwhite;
+            border-radius: 50%;
+            
+        }
+        .event{
+            width: 600px;
+            height: 600px;
+            position: absolute;
+            /* box-shadow:0 0 30px 3px gold; */
+            /* border: 1px solid white; */
+            transform: translate(-50%,-50%);
+            left: 50%;
+            top: 50%;
+            border-radius: 50%;
+            animation: rot 15s linear infinite;
+            /* background-color: yellow; */
+        }
+        .event::before{
+            content: "";
+            width: 50px;
+            height: 50px;
+            left: 0;
+            top: 50%;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            background-color: red;
+            border-radius: 50%;
+        }
+        @keyframes rot{
+            0%{
+                transform: translate(-50%,-50%) rotate(0deg);
+            }
+            100%{
+                transform: translate(-50%,-50%) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sun"></div>
+    <div class="earth">
+        <div class="moon"></div>
+    </div>
+    <div class="event"></div>
+    <div class="mars"></div>
+</body>
+</html>

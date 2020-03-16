@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="cvs" width="500" height="500"></canvas>
+    <script>
+        var cvs = document.getElementById('cvs');
+        var context = cvs.getContext('2d');
+        context.translate(100, 100);
+        setInterval(() => {
+            context.clearRect(-50, -50, 500, 500);
+            
+            context.rotate(Math.PI / 180 * 45);
+            context.fillRect(-25,-25,50,50);
+        }, 50);
+        
+        
+        
+    </script>
+</body>
+</html>

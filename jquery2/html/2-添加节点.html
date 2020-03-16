@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-1.11.1.js"></script>
+    <script>
+        $(window).ready(function(){
+            //append()方法在盒子的最末尾添加
+            $("button").click(function(){
+                //第一种 末尾加
+                var newLi = $("<li>我是lxl</li>");
+                // $("ul").append(newLi);
+                // newLi.appendTo($("ul"));
+                //第二种 最前面加
+                // $("ul").prepend(newLi);
+                //第三种  after和before  兄弟节点
+                // $("li").eq(2).after(newLi);
+                $("li").eq(2).before(newLi);
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>添加</button>
+    <ul>
+        <li>LXL</li>
+        <li>LXL</li>
+        <li>LXL</li>
+        <li>LXL</li>
+        <li>LXL</li>
+    </ul>
+</body>
+</html>

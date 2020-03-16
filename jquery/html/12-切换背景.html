@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+        .c{
+            background-color: red;
+        }
+        .a{
+            background-color: black;
+        }
+        .b{
+            background-color: green;
+        }
+    </style>
+    <script src="../js/jquery-1.11.1.js"></script>
+    <script>
+        $(function(){
+            //切换背景
+             $("button").click(function(){
+            //     if($("div").hasClass("c")){
+            //         $("div").removeClass("c")
+            //     }else{
+            //         $("div").addClass("c")
+            //     }
+            //一行代码实现操作     toggle(类)、切换类
+                 $("div").toggleClass("c",function(){
+                    toggleClass("b");
+                 });
+                //  $("div").toggleClass("b");
+                //  $("div").toggleClass("a");
+             });  
+            
+           
+        });
+    </script>
+</head>
+<body>
+    <button>切换背景</button>
+    <div></div>
+</body>
+</html>

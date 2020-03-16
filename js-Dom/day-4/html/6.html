@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            height: 5000px;
+        }
+        img{
+            position: absolute;
+            padding: 10px 0px;
+            border: 1px solid #cccccc;
+            cursor: pointer;
+            width: 100px;
+        }
+    </style>
+    
+</head>
+<body>
+    <img src="../images/img.jpg" alt="">
+    <script src="../js/animate.js"></script>
+    <script>
+        var img = document.getElementsByTagName("img")[0];
+        var timer = null;
+        var trY = 0;var trX = 0;
+        var leY = 0;var leX = 0;
+        document.onmousemove = function(event){
+            event = event || window.event;
+            var pagey = event.pageY || (scroll().top+event.clientY);
+            var pagex = event.pageX || (scroll().top+event.clientX);
+            trY = pagey-img.offsetTop/2;
+            trX = pagex-img.offsetLeft/2;
+            clearInterval(timer);
+            timer = setInterval(function(){
+                leY = img.offsetTop;
+                var stepy = (trY-leY)/10;
+                stepy = stepy>0?Math.ceil(stepy):Math.floor(stepy);
+                leY = leY + stepy;
+                img.style.top = leY + "px"; 
+            },1);
+            timer = setInterval(function(){
+                leX = img.offsetLeft;
+                var stepx = (trX-leX)/10;
+                stepx = stepx>0?Math.ceil(stepx):Math.floor(stepx);
+                leX = leX + stepx;
+                img.style.left = leX + "px"; 
+            },10);
+            if(Math.abs(trY-img.offsetTop)<=Math.abs(stepy)&&Math.abs(trX-img.offsetLeft)<=Math.abs(stepx)){
+                img.style.left = trX + "px";
+                img.style.top = trY + "px"; 
+                clearInterval(timer);
+            }
+        }
+    </script> 
+</body>
+</html>
